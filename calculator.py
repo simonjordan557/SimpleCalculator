@@ -39,10 +39,10 @@ class Calculator:
         return a - b
 
     def multiplication(self, a, b):
-        return a * b
+        return round(a * b, 2)
 
     def division(self, a, b):
-        return a / b
+        return round(a / b, 2)
 
     def exponent(self, a, b):
         return a ** b
@@ -57,9 +57,8 @@ class Calculator:
         return self.operators[input(f"Which operation to perform: {self.operators_display} ? ")]
 
     def continue_this_calculation(self):
-        cont = input("\nDo you want to continue (Y / N / EXIT)?").lower()
+        cont = input("\nDo you want to continue (Y / N / EXIT)? ").lower()
         if cont == "y" or cont == "yes":
-            print("\n")
             return True
         elif cont == "e" or cont == "exit":
             sys.exit()
